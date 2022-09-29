@@ -10,23 +10,42 @@ using namespace std;
 
 int main()
 {
-	int n1, n2, n3;
+	int num1, num2, num3;
+	int min, max, other;
 
-	cin >> n1 >> n2 >> n3;
+	cin >> num1 >> num2 >> num3;
 
-	if (n1 > n2)
+	if (num1 > num2)
 	{
-		if ( n2 < n3)
-			cout << n2 << "is min number\n";
+		if ( num2 < num3)
+			min = num2; 
 		else // num2 >= num3
-			cout << n3 << "is min number\n";
+			min =   num3;
 	}
 	else // num1 <= num2
 	{
-		if (n1 < n3)
-			cout << n2 << "is min number\n";
+		if (num1 < num3)
+			min = num1;
+		else // num >= num1
+			min = num3;
+	}
+	//To find max
+	if (num1 > num2)
+	{
+		if ( num1 >  num3)
+			max = num1;
+		else // num1 <= num3
+			max = num3;
+	}
+	else // num1 <= num2
+	{
+		if (num2 < num3)
+			max = num3;
+		else // num >= num1
+			max = num2;
 	}
 		
-			
+	cout << "max : " << max << endl;
+	cout << "min: "  << min << endl; 
 		
 } 
